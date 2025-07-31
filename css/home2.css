@@ -1,0 +1,302 @@
+  /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, rgba(1, 1, 24, 0.897), rgba(0, 0, 0, 0.92));
+            color: white;
+            min-height: 100vh;
+        }
+        
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            color: rgb(216, 43, 43);
+            font-size: 1.5rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: rgb(131, 5, 5);
+        }
+        
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            margin-right: 1rem;
+        }
+        
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-list li a span {
+            color: brown;
+        }
+        
+        .nav-list li a:hover {
+            color: #0d80b4;
+            text-decoration: underline;
+        }
+        
+        .nav-icons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        /* Mobile Menu Toggle (hidden by default) */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: url('../images/drinks.jpg') no-repeat center center;
+            background-size: cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 5rem;
+            position: relative;
+            border-radius: 20px;
+            margin: 1rem;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 8rem);
+            color: #d82b2b;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bolder;
+            position: relative;
+            z-index: 1;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+        }
+        
+        .hero-title span {
+            color: white;
+        }
+        
+        .hero-title .flim {
+            color: black;
+            -webkit-text-stroke: 1px #d82b2b;
+        }
+        
+        .hero-text {
+            position: relative;
+            z-index: 1;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            text-align: center;
+            width: 100%;
+            margin-top: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .animated-text {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            height: 1.2em;
+        }
+        
+        .outer-text, .inner-text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        
+        .outer-text {
+            color: black;
+            animation-name: move-inward;
+        }
+        
+        .inner-text {
+            color: #d82b2b;
+            animation-name: move-inwards;
+        }
+        
+        @keyframes move-inward {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(50px); }
+        }
+        
+        @keyframes move-inwards {
+            0%, 100% { transform: translateY(50px); opacity: 0; }
+            50% { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Menu Sections */
+        .menu-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 1rem;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            text-align: center;
+            margin-bottom: 2rem;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bolder;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .menu-item {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            height: 350px;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(216, 43, 43, 0.3);
+        }
+        
+        .menu-item-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .menu-item-info {
+            padding: 1rem;
+        }
+        
+        .menu-item-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .menu-item-price {
+            color: #d82b2b;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .add-to-cart {
+            display: block;
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+            background-color: transparent;
+            color: white;
+            border: 1px solid #d82b2b;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #d82b2b;
+            color: black;
+        }
+        
+        /* Cart Indicator */
+        .cart-indicator {
+            position: relative;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #d82b2b;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .nav-list {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                margin: 1rem 0;
+            }
+            
+            .nav-list.active {
+                display: flex;
+            }
+            
+            .nav-icons {
+                display: none;
+            }
+            
+            .hero {
+                padding: 0 1rem;
+                height: 60vh;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freddy's Cinema - Movie Theater Experience</title>
+    <script src="https://kit.fontawesome.com/38ce96363c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/home1.css">
+    <script src="./js/home1.js"></script>
+</head>
+<body class="fullbody">
+    <!-- Main Navigation Bar -->
+    <nav class="navbar">
+      <h2 class="logo"><i class="fa-solid fa-film fa-bounce fa-2xl" style="color: #bf0303;">&nbsp;</i>FREDDY'S <span>CINEMA</span></h2>
+      
+      <!-- Mobile menu toggle button -->
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars fa-2x"></i>
+      </div>
+      
+      <!-- Navigation Links -->
+      <ul class="nav-list" id="nav-list">
+        <li><a href="index.html" class="active">HO<span>ME</span></a></li>
+        <li><a href="home2.html">FOOD & DRINKS</a></li>
+        <li><a href="#Showtimes">SHOWTIMES</a></li>
+        <li><a href="home3.html">RESERVATIONS</a></li>
+        <li><a href="#ABOUT-US">ABOUT US</a></li>
+      </ul>
+      
+      <!-- Navigation Icons (hidden on mobile) -->
+      <div class="nav-icons">
+        <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #afb0b1;"></i>
+        <i class="fa-solid fa-cart-shopping fa-xl" style="color: #909192;"></i>
+      </div>
+    </nav>
+    
+    <!-- Hero Section with Featured Movie -->
+    <section class="home">
+      <div class="main">
+        <h1 class="head">DEADPOOL & WOLVERINE</h1>
+        <p class="p1">A listless Wade Wilson toils away in civilian life with his days as the morally flexible mercenary, Deadpool, behind him.</p>
+        <p class="p2">
+          <i class="fa-regular fa-circle-play fa-2xl" style="color: #ffffff;"></i>&nbsp; &nbsp;Watch Trailer
+          <button class="btn" id="book-now-btn">BOOK NOW</button>
+        </p>
+      </div>
+    </section>
+    
+    <!-- Quick Booking Navigation -->
+    <nav class="navbar2">
+      <h2 class="logo2">BOOK A MOVIE</h2>
+      <div class="dropdown">
+        <button class="btnn">SELECT CINEMA</button>
+        <div class="dropdown-content">
+          <a href="#">FREDDY'S CINEMA SAPELE ROAD</a>
+          <a href="#">FREDDY'S CINEMA RINDROAD</a>
+          <a href="#">FREDDY'S CINEMA AIRPORT ROAD</a>
+          <a href="#">FREDDY'S CINEMA MM WAY</a>
+        </div>
+      </div>
+      <button class="btnn">SELECT MOVIE</button>
+      <button class="btnn">SELECT TIME</button>
+      <button class="btnn1">QUICK BOOK</button>
+    </nav>
+    
+    <!-- Now Showing Section -->
+    <h1 class="section-title">NOW SHOWING</h1>
+    <p class="section-subtitle">Movies now showing exclusively in theaters everywhere.</p>
+    
+    <!-- Date Selector Scroll -->
+    <div class="scroll-container">
+      <a href="#SHOWTIMES">AUG 28TH</a>
+      <a href="#SHOWTIMES">AUG 29TH</a>
+      <a href="#SHOWTIMES">AUG 30TH</a>
+      <a href="#SHOWTIMES">AUG 31TH</a>
+      <a href="#SHOWTIMES">SEP 1ST</a>
+      <a href="#SHOWTIMES">SEP 2ND</a>
+    </div>
+    
+    <!-- Cinema Location Dropdown -->
+    <select id="cinema-selector">
+      <option value="FREDDY CINEMA BENIN">FREDDY'S CINEMA SAPELE ROAD</option>
+      <option value="FREDDY CINEMA RINDROAD">FREDDY'S CINEMA RINGROAD</option>
+      <option value="FREDDY CINEMA AIRPORT ROAD">FREDDY'S CINEMA AIRPORT ROAD</option>
+      <option value="FREDDY CINEMA MM WAY">FREDDY'S CINEMA MM WAY</option>
+    </select>
+    
+    <!-- Movies Grid Section -->
+    <section class="movies-container" id="Showtimes">
+      <!-- Movie Card 1 -->
+      <div class="movie-card">
+        <img src="./images/inside out.jpg" alt="Inside Out 2">
+        <div class="movie-info">
+          <h3 class="movie-title">INSIDE OUT 2</h3>
+          <div class="movie-meta">2024 | Animation | 100 min</div>
+          <p class="movie-description">Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions!</p>
+          <button class="showtime-btn">10:30AM <span>SCREEN ONE</span></button>
+          <button class="showtime-btn">12:30PM <span>SCREEN TWO</span></button>
+          <button class="showtime-btn">2:30PM <span>SCREEN THREE</span></button>
+        </div>
+      </div>
+      
+      <!-- Movie Card 2 -->
+      <div class="movie-card">
+        <img src="./images/borderland.jpg" alt="Borderland">
+        <div class="movie-info">
+          <h3 class="movie-title">BORDERLAND</h3>
+          <div class="movie-meta">2024 | Action | 102 min</div>
+          <p class="movie-description">Returning to her home planet, an infamous outlaw forms an unexpected alliance with a team of unlikely heroes.</p>
+          <button class="showtime-btn">1:00PM <span>SCREEN SEVEN</span></button>
+          <button class="showtime-btn">4:30PM <span>SCREEN FOUR</span></button>
+          <button class="showtime-btn">8:30PM <span>SCREEN SIX</span></button>
+        </div>
+      </div>
+      
+      <!-- Movie Card 3 -->
+      <div class="movie-card">
+        <video controls poster="./images/Trap.jpg">
+          <source src="./videos/trap.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="movie-info">
+          <h3 class="movie-title">TRAP</h3>
+          <div class="movie-meta">2024 | Thriller | 110 min</div>
+          <p class="movie-description">A father and his teen daughter attend a pop concert only to realize they've entered the center of a dark and sinister event.</p>
+          <button class="showtime-btn">1:00PM <span>SCREEN SEVEN</span></button>
+          <button class="showtime-btn">4:30PM <span>SCREEN FOUR</span></button>
+        </div>
+      </div>
+      
+      <!-- Movie Card 4 -->
+      <div class="movie-card">
+        <img src="./images/blink twice.jpg" alt="Blink Twice">
+        <div class="movie-info">
+          <h3 class="movie-title">BLINK TWICE</h3>
+          <div class="movie-meta">2024 | Thriller | 100 min</div>
+          <p class="movie-description">On a dream vacation to his private island, strange things start to happen. Frida will have to uncover the truth to make it out.</p>
+          <button class="showtime-btn">1:00PM <span>SCREEN SIX</span></button>
+        </div>
+      </div>
+      
+      <!-- Movie Card 5 -->
+      <div class="movie-card">
+        <img src="./images/afraid.jpg" alt="Afraid">
+        <div class="movie-info">
+          <h3 class="movie-title">AFRAID</h3>
+          <div class="movie-meta">2024 | Horror | 100 min</div>
+          <p class="movie-description">Curtis' family is selected to test a new home device: a digital assistant called AIA. AIA learns the family's behaviors and begins...</p>
+          <button class="showtime-btn">3:00PM <span>SCREEN SIX</span></button>
+          <button class="showtime-btn">6:00PM <span>SCREEN SIX</span></button>
+          <button class="showtime-btn">9:00PM <span>SCREEN SIX</span></button>
+        </div>
+      </div>
+      
+      <!-- Movie Card 6 -->
+      <div class="movie-card">
+        <video controls poster="./images/inspector-sun-poster.jpg">
+          <source src="./videos/inspector-sun.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="movie-info">
+          <h3 class="movie-title">INSPECTOR SUN</h3>
+          <div class="movie-meta">2024 | Animation | 95 min</div>
+          <p class="movie-description">Fired from his detective job after a mission goes awry, Inspector Sun boards a seemingly normal plane for a much-needed vacation.</p>
+          <button class="showtime-btn">12:00PM <span>SCREEN FIVE</span></button>
+          <button class="showtime-btn">6:00PM <span>SCREEN SEVEN</span></button>
+          <button class="showtime-btn">5:00PM <span>SCREEN SIX</span></button>
+        </div>
+      </div>
+      
+      <!-- Movie Card 7 -->
+      <div class="movie-card">
+        <img src="./images/ALIEN ROMULUS.jpg" alt="Alien: Romulus">
+        <div class="movie-info">
+          <h3 class="movie-title">ALIEN: ROMULUS</h3>
+          <div class="movie-meta">2024 | Sci-Fi | 102 min</div>
+          <p class="movie-description">While scavenging the deep ends of a derelict space station, a group of young space colonizers come face to face with the most terrifying life form in the universe.</p>
+          <button class="showtime-btn">2:00PM <span>SCREEN FOUR</span></button>
+          <button class="showtime-btn">4:00PM <span>SCREEN EIGHT</span></button>
+          <button class="showtime-btn">7:00PM <span>SCREEN ONE</span></button>
+        </div>
+      </div>
+      
+      <!-- Movie Card 8 -->
+      <div class="movie-card">
+        <video controls poster="./images/the-crow-poster.jpg">
+          <source src="./videos/THE CROW.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="movie-info">
+          <h3 class="movie-title">THE CROW</h3>
+          <div class="movie-meta">2024 | Action | 110 min</div>
+          <p class="movie-description">When soulmates Eric and Shelly are brutally murdered, Eric is given the chance to save his true love by sacrificing himself.</p>
+          <button class="showtime-btn">12:00PM <span>SCREEN EIGHT</span></button>
+          <button class="showtime-btn">6:00PM <span>SCREEN TWO</span></button>
+          <button class="showtime-btn">5:00PM <span>SCREEN FIVE</span></button>
+        </div>
+      </div>
+      
+      <!-- Movie Card 9 -->
+      <div class="movie-card">
+        <img src="./images/deadpool.jpg" alt="Deadpool & Wolverine">
+        <div class="movie-info">
+          <h3 class="movie-title">DEADPOOL & WOLVERINE</h3>
+          <div class="movie-meta">2024 | Action | 125 min</div>
+          <p class="movie-description">Wolverine is recovering from his injuries when he crosses paths with the loudmouth Deadpool. They team up to defeat a common enemy.</p>
+          <button class="showtime-btn">2:00PM <span>SCREEN EIGHT</span></button>
+          <button class="showtime-btn">9:00PM <span>SCREEN TWO</span></button>
+          <button class="showtime-btn">7:00PM <span>SCREEN FIVE</span></button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Promotions Section -->
+    <section class="promotions">
+      <h1 class="section-title">PROMOTIONS</h1>
+      <p class="section-subtitle">What's New At Freddy's Cinema</p>
+      <img class="promo-image" src="./images/cinema1.jpg" alt="Cinema Promotions">
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="footer" id="ABOUT-US">
+      <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-section">
+          <h2><i class="fa-solid fa-film" style="color: #bf0303;"></i> Freddy's Cinema</h2>
+          <p>Designed to high class standards with perfect acoustics, each auditorium is equipped with state-of-the art projection and Dolby surround sound. Enjoy your visit to Freddy Cinema.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook" style="color: #0723f2;"></i></a>
+            <a href="https://www.youtube.com/@Freddytech0" target="_blank"><i class="fa-brands fa-youtube" style="color: #eb3305;"></i></a>
+            <a href="https://www.instagram.com/big_freddy___" target="_blank"><i class="fa-brands fa-square-instagram" style="color: #f90637;"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter" style="color: #141414;"></i></a>
+            <a href="https://www.tiktok.com/@bigfredddy" target="_blank"><i class="fa-brands fa-tiktok" style="color: #141414;"></i></a>
+          </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="footer-section">
+          <h2>Contact Us</h2>
+          <p><i class="fa-solid fa-location-dot" style="color: #910303;"></i> Freddy's Entertainment Center 311 Sapele, Road, Benin city, Edo State</p>
+          <p><i class="fa-regular fa-envelope" style="color: #710404;"></i> Info@osagieosayi123.com</p>
+          <p><i class="fa-solid fa-phone-volume" style="color: #61050e;"></i> Ticket: 08165153209</p>
+          <p><i class="fa-solid fa-phone-volume" style="color: #61050e;"></i> Customer Care Line: 08159204641</p>
+        </div>
+        
+        <!-- Quick Links Section -->
+        <div class="footer-section">
+          <h2>Quick Link</h2>
+          <a href="#SHOWTIMES">Showtimes</a>
+          <a href="#">Feedback</a>
+          <a href="#">Contact Us</a>
+          <h2>Get In Touch</h2>
+          <a href="#">FAQs & contact us</a>
+          <a href="#">Give us feedback</a>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="footer-section">
+          <h2>Connect with us</h2>
+          <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i> Facebook</a>
+          <a href="https://Instagram.com"><i class="fa-brands fa-square-instagram"></i> Instagram</a>
+          <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+          <a href="https://whatsapp.com"><i class="fa-brands fa-square-whatsapp"></i> Whatsapp</a>
+          <a href="https://telegram.com"><i class="fa-brands fa-telegram"></i> Telegram</a>
+        </div>
+      </div>
+      
+      <!-- About Us Section -->
+      <div class="newsletter-form">
+        <h2 id="ABOUT US">ABOUT US</h2>
+        <p>Freddy's Cinemas is the leading cinema chain of West Africa with 10 locations, 25 screens and over 2,700 seats in operation across Nigeria. FC is part of the Freddy's Group, a Nigerian based conglomerate established in 2022 with its key focus on hospitality and entertainment with diverse interests in Restaurants, Hotels, Industrial Catering, Cinemas, Family Entertainment Centres and Facility Management.</p>
+        
+        <!-- Newsletter Form -->
+        <form id="newsletter-form">
+          <label for="email">Just send us your contact email and we will contact you:</label>
+          <input type="email" id="email" placeholder="YOUR E-MAIL" required>
+          <button type="submit" style="display:none;">Submit</button>
+        </form>
+      </div>
+      
+      <!-- Copyright Section -->
+      <div class="copyright">
+        <p>Freddy @ cct Web Dev | Designed by Osagie Joshua Osayi</p>
+      </div>
+    </footer>
+</body>
+</html>

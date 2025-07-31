@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freddy's Cinema - Reservations</title>
+    <script src="https://kit.fontawesome.com/38ce96363c.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="./css/home3.css">
+   <script src="./js/home3.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h2 class="logo">
+            <i class="fa-solid fa-film fa-bounce fa-xl" style="color: #bf0303;"></i>
+            <span>&nbsp;FREDDY'S</span> <span>CINEMA</span>
+        </h2>
+        
+        <!-- Mobile Menu Toggle -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">HO<span>ME</span></a></li>
+            <li><a href="home2.html">FOOD & DRINKS</a></li>
+            <li><a href="index.html">SHOWTIMES</a></li>
+            <li><a href="#" class="active">RESERVATIONS</a></li>
+            <li><a href="index.html#ABOUT-US">ABOUT US</a></li>
+        </ul>
+        
+        <!-- Navigation Icons -->
+        <div class="nav-icons">
+            <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #afb0b1;"></i>
+            <i class="fa-solid fa-cart-shopping fa-xl" style="color: #909192;"></i>
+        </div>
+    </nav>
+    
+    <!-- Reservation Form Container -->
+    <div class="reservation-container">
+        <div class="reservation-header">
+            <h1>BOOK YOUR CINEMA EXPERIENCE</h1>
+            <p>Secure your seats in advance for an unforgettable movie experience</p>
+        </div>
+        
+        <hr class="divider">
+        
+        <form class="reservation-form" id="reservationForm">
+            <!-- Personal Information -->
+            <div class="form-group">
+                <label for="firstName">FIRST NAME</label>
+                <input type="text" id="firstName" placeholder="Enter your first name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="lastName">LAST NAME</label>
+                <input type="text" id="lastName" placeholder="Enter your last name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">EMAIL ADDRESS</label>
+                <input type="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            
+            <!-- Movie Selection -->
+            <div class="form-group full-width">
+                <label for="movie">SELECT MOVIE</label>
+                <select id="movie" required>
+                    <option value="" disabled selected>Choose a movie</option>
+                    <option value="deadpool">Deadpool & Wolverine</option>
+                    <option value="insideout">Inside Out 2</option>
+                    <option value="alien">Alien: Romulus</option>
+                    <option value="borderland">Borderland</option>
+                    <option value="trap">Trap</option>
+                </select>
+            </div>
+            
+            <!-- Showtime Selection -->
+            <div class="form-group">
+                <label for="date">DATE</label>
+                <input type="date" id="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="time">TIME</label>
+                <select id="time" required>
+                    <option value="" disabled selected>Select time</option>
+                    <option value="10:30">10:30 AM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="15:30">3:30 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="20:30">8:30 PM</option>
+                </select>
+            </div>
+            
+            <!-- Number of Tickets -->
+            <div class="form-group">
+                <label for="tickets">NUMBER OF TICKETS</label>
+                <input type="number" id="tickets" min="1" max="10" value="1" required>
+            </div>
+            
+            <!-- Seat Preference -->
+            <div class="form-group">
+                <label for="seatType">SEAT TYPE</label>
+                <select id="seatType">
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                    <option value="vip">VIP</option>
+                </select>
+            </div>
+            
+            <!-- Special Requests -->
+            <div class="form-group full-width">
+                <label for="requests">SPECIAL REQUESTS</label>
+                <textarea id="requests" rows="3" placeholder="Any special requirements or requests"></textarea>
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="form-group full-width">
+                <button type="submit" class="submit-btn">CONFIRM RESERVATION</button>
+            </div>
+        </form>
+        
+        <!-- Currently Showing Movies (for reference) -->
+        <div class="movie-selection">
+            <h3>NOW SHOWING</h3>
+            <div class="movie-card">
+                <img src="./images/deadpool.jpg" alt="Deadpool & Wolverine" class="movie-poster">
+                <div class="movie-info">
+                    <h4 class="movie-title">DEADPOOL & WOLVERINE</h4>
+                    <p class="movie-meta">Action | 125 min | Rated R</p>
+                    <p>Wolverine is recovering from his injuries when he crosses paths with the loudmouth Deadpool.</p>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <img src="./images/inside out.jpg" alt="Inside Out 2" class="movie-poster">
+                <div class="movie-info">
+                    <h4 class="movie-title">INSIDE OUT 2</h4>
+                    <p class="movie-meta">Animation | 100 min | Rated PG</p>
+                    <p>Teenager Riley's mind headquarters is undergoing a sudden demolition.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
